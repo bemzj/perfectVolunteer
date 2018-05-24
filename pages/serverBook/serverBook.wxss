@@ -1,0 +1,7 @@
+/* pages/serverBook/serverBook.wxss */
+#main{
+  width: 100%;
+}
+#main image{
+  width: 100%;
+}

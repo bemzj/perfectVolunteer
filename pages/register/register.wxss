@@ -1,0 +1,32 @@
+/* pages/register/register.wxss */
+#main{
+  width: 100%;
+  background:no-repeat left top;
+  background-color: #eaf9fa;
+  background-size:100% auto;
+}
+.main{
+  width: 80.4%;
+  margin: 0 auto;
+  font-size: 0rpx;
+  padding-top: 100rpx;
+}
+.main image{
+  width: 100%;
+}
+.book{
+  width: 100%;
+  background-color: #ffffff;
+  padding: 50rpx 0 70rpx; 
+}
+.book view{
+  width: 64.4%;
+  margin: 0 auto;
+  display: block;
+  background-color: #93e9f3;
+  color: white;
+  font-size: 30rpx;
+  text-align: center;
+  border-radius: 8rpx;
+  line-height: 84rpx;
+}

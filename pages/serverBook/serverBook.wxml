@@ -1,0 +1,11 @@
+<!--pages/serverBook/serverBook.wxml-->
+<view id='main'>
+  <view class='banner'>
+    <swiper style='height:{{swiperHeight}}' indicator-dots="{{swiper.indicatorDots}}" autoplay="{{swiper.autoplay}}" interval="{{swiper.interval}}" duration="{{swiper.duration}}" circular="{{swiper.circular}}" indicator-color="#ffffff" indicator-active-color="#fcee23">
+      <swiper-item wx:for="{{swiper.bottomBanners}}" wx:key='key'>
+        <image src="{{item}}" mode='widthFix'></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view></view>
+</view>

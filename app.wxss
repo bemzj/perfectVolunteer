@@ -1,0 +1,13 @@
+/**app.wxss**/
+page{
+  min-height:100%;
+}
+view{
+    box-sizing: border-box;
+}
+.clearfloat::after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0; }

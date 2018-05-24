@@ -1,0 +1,9 @@
+<!--pages/register/register.wxml-->
+<view id='main'style='background-image:url("../../images/rule_back.png")'>
+  <view class='main'>
+    <image src='../../images/rules_detail_no.png' mode='widthFix'></image>
+    <view class='book'>
+      <view>我要预约</view>
+    </view>
+  </view>
+</view>

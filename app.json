@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/serverBook/serverBook",
+    "pages/register/register",
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#7ce6f4",
+    "navigationBarTitleText": "完美义工进万家",
+    "navigationBarTextStyle":"black",
+    "backgroundColor":"#f3f3f3"
+  }
+}

@@ -1,0 +1,81 @@
+/**index.wxss**/
+page{
+  width: 100%;
+  height: 100%;
+}
+.container{
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, #7ce6f4 0%, #c9f2f2 65% , #c9f2f2 100%);
+  background: linear-gradient(top, #7ce6f4 0%, #c9f2f2 65% , #c9f2f2 100%);
+}
+.main{
+  width: 100%;
+  height: 100%;
+  background:no-repeat left top;
+  background-size: 100% auto; 
+  position: relative;
+}
+.bannerAndChoice{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.bannerAndChoice image{
+  width: 100%;
+}
+.bannerAndChoice swiper{
+  width: 100%;
+  font-size: 30rpx;
+}
+.banner{
+  width: 100%;
+}
+.swiperNav{
+  padding: 14rpx 0;
+  font-size: 0rpx;  
+  text-align: center;
+}
+.swiperNav view{
+  width: 14rpx;
+  height:14rpx;
+  background-color: #838383;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 30rpx;
+  margin: 0 6rpx;
+}
+.swiperNav .swiperActive{
+  background-color: #fcee22;
+}
+.choice{
+  width: 76%;
+  margin: 0 auto;
+  padding-bottom: 30rpx;
+}
+.choice .choiceOut{
+  width: 50%;
+  float: left;
+}
+.choice .choiceOut .choiceIn{
+  width: 110rpx;
+  margin: 0 auto;
+}
+.choice .choiceOut .choiceIn >view{
+  height: 100rpx;
+  width: 94rpx;
+  margin: 0 auto;
+  position: relative;
+}
+.choice .choiceOut .choiceIn{
+  text-align: center;
+  font-size: 26rpx;
+  line-height: 66rpx;
+}
+.choice .choiceOut .choiceIn >view image{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
