@@ -1,7 +1,191 @@
 /* pages/serverBook/serverBook.wxss */
+page{
+  background-color: #eaeaea;
+}
 #main{
   width: 100%;
 }
 #main image{
+  width: 100%;
+}
+.productDetails{
+  background-color: #e2f7fa;
+  margin-top: 10rpx;
+}
+.title{
+  padding: 40rpx 0 30rpx;
+}
+.title text{
+  font-size: 26rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color: #0b0b0b;
+  display: block;
+  width: 100%;
+}
+.title view{
+  display: block;
+  width: 170rpx;
+  border-bottom: 6rpx solid #7ce6f4;
+  margin: 0 auto;
+}
+.content{
+  width: 79.33%;
+  margin: 0 auto;
+}
+.content image{
+  width: 100%;
+}
+.nowBook{
+  width: 100%;
+  line-height: 115rpx;
+  font-size: 36rpx;
+  text-align: center;
+  background-color: #adeef2;
+  margin-top: 40rpx;
+}
+#bookPop{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  -webkit-flex-direction: column;  
+}
+.bookPop{
+    width: 89%;
+    box-sizing: border-box;
+    padding: 50rpx 55rpx;
+    background-color: white;
+    border-radius: 18rpx;
+}
+.inputBox{
+  margin-bottom: 20rpx;
+}
+.inputBox>view{
+  float: left;
+}
+.inputBox input{
+  width: 90%;
+  margin: 0 auto;
+  height: 100%;
+}
+.inputBox>view:nth-child(1){
+  width: 30%;
+  font-size: 28rpx;
+  line-height: 72rpx;
+}
+.inputBox>view:nth-child(2){
+  width: 70%;
+  font-size: 28rpx;
+  height: 72rpx;
+  box-sizing: border-box;
+  border: 1px solid #efefef;
+  border-radius: 8rpx;
+  background: no-repeat 95% center;
+  background-size: 19rpx;
+  box-shadow: 2rpx -6rpx 20rpx rgba(222,222,222, 0.43);
+}
+.timeBox{
+  width: 92%;
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  line-height: 70rpx;
+}
+.detailsAddress{
+  width: 100%;
+  font-size: 28rpx;
+  height: 72rpx;
+  box-sizing: border-box;
+  border: 1px solid #efefef;
+  box-shadow: 2rpx -6rpx 20rpx rgba(222,222,222, 0.43);
+  margin-bottom: 20rpx;
+}
+.detailsAddress input{
+  width: 92%;
+  margin: 0 auto;
+  height: 100%;
+}
+.placeholder{
+  text-align: center;
+  color: #d2d2d2;
+  letter-spacing: 14rpx;
+}
+.inputBox>view:nth-child(1) .full{
+  letter-spacing: 34rpx;
+}
+.inputBox>view:nth-child(1) .full1{
+  letter-spacing: 14rpx;
+  position: relative;
+}
+.inputBox>view:nth-child(1) .full1::after{
+  content: "（可不填）";
+  position: absolute;
+  top:18rpx;
+  left: 7rpx;
+  font-size: 20rpx;
+  color: #b5b5b5;
+  letter-spacing: 0rpx;
+}
+.picker{
+  width: 90%;
+  margin: 0 auto;
+  line-height: 70rpx;
+}
+#timeSelect{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  -webkit-flex-direction: column; 
+}
+.tsDisplay{
+  display: none!important;
+}
+.comfirm{
+  width: 500rpx;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #93e9f3;
+  border-radius: 8rpx;
+  color: white;
+  font-size: 30rpx;
+  line-height: 84rpx;
+}
+.comBtn{
+  width: 100%;
+  line-height: 84rpx;
+  border-radius: 8rpx;
+  font-size: 30rpx;
+  color: white;
+  background-color: #93e9f3;
+  text-align: center;
+  margin-top: 40rpx;
+}
+.closeAddress{
+  width: 64rpx;
+  margin-top: 20rpx;
+}
+.closeAddress image{
   width: 100%;
 }

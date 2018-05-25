@@ -5,11 +5,11 @@ const app = getApp()
 Page({
   data: {
     count: 0,
+    swiperHeight: '417rpx',
     swiper:{
       autoplay:'true',
       interval:5000,
       duration:300,
-      swiperHeight:'417rpx',
       circular:'true',
       bottomBanners: [
         '../../images/index_banner1.png',
@@ -52,20 +52,7 @@ Page({
       src: that.data.swiper.bottomBanners[0],
       success: function (res) {
         that.setData({
-          swiper: {
-            swiperHeight: res.height+'rpx',
-            autoplay: 'true',
-            interval: 5000,
-            duration: 300,
-            
-            swiperHeight: res.height+'rpx',
-            circular: 'true',
-            bottomBanners: [
-              '../../images/index_banner1.png',
-              '../../images/index_banner1.png',
-              '../../images/index_banner1.png'
-            ]
-          }
+          swiperHeight: res.height + 'rpx'
         })
       }
     })

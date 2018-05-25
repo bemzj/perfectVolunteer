@@ -1,0 +1,5 @@
+<!--pages/registerVolun/registerVolun.wxml-->
+<view id='main'style='background-image:url("../../images/rule_back.png")'>
+  <view class='main'>
+  </view>
+</view>

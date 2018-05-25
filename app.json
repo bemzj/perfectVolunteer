@@ -1,8 +1,10 @@
 {
   "pages":[
+    "pages/index/index",
+    "pages/registerVolun/registerVolun",
     "pages/serverBook/serverBook",
-    "pages/register/register",
-    "pages/index/index"
+    "pages/register/register"
+    
   ],
   "window":{
     "backgroundTextStyle":"light",
