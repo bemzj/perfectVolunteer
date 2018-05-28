@@ -20,70 +20,72 @@
 </view>
 <view id='bookPop' class='{{serverStatus==0?"tsDisplay":""}}'>
   <view class='bookPop'>
-  <form>
-    <view class='inputBox clearfloat'>
-      <view>
-        <text>服务事项：</text>
+    <form>
+      <view class='inputBox clearfloat'>
+        <view>
+          <text>服务事项：</text>
+        </view>
+        <view style='background-image:url("../../images/triangle.png")'>
+          <picker bindchange="styleChange" value="{{style}}" range="{{bookStyle}}">
+            <view class="picker">
+              {{bookStyle[style]}}
+            </view>
+          </picker>
+        </view>
       </view>
-      <view style='background-image:url("../../images/triangle.png")'>
-        <picker bindchange="styleChange" value="{{style}}" range="{{bookStyle}}">
-          <view class="picker">
-            {{bookStyle[style]}}
-          </view>
-        </picker>
+      <view class='inputBox clearfloat'>
+        <view>
+          <text>预约时间：</text>
+        </view>
+        <view style='background-image:url("../../images/triangle.png")'>
+          <text class='timeBox' bindtap='showSelect'>{{year}}年{{month}}月{{day}}日{{time}}-{{time+2}}时</text>
+        </view>
       </view>
-    </view>
-    <view class='inputBox clearfloat'>
-      <view>
-        <text>预约时间：</text>
+      <view class='inputBox clearfloat'>
+        <view>
+          <text>区域选择：</text>
+        </view>
+        <view style='background-image:url("../../images/triangle.png")'>
+          <picker bindchange="regionChange" mode="region" value="{{region}}">
+            <view class="picker">
+              {{region[0]}} {{region[1]}} {{region[2]}}
+            </view>
+          </picker>
+        </view>
       </view>
-      <view style='background-image:url("../../images/triangle.png")'>
-        <text class='timeBox' bindtap='showSelect'>{{year}}年{{month}}月{{day}}日{{time}}-{{time+2}}时</text>
+      <view class='detailsAddress'>
+        <input type='text' placeholder="详细地址" placeholder-class='placeholder'></input>
       </view>
-    </view>
-    <view class='inputBox clearfloat'>
-      <view>
-        <text>区域选择：</text>
+      <view class='inputBox clearfloat'>
+        <view>
+          <text class='full'>姓名:</text>
+        </view>
+        <view>
+          <input type='text'></input>
+        </view>
       </view>
-      <view style='background-image:url("../../images/triangle.png")'>
-        <picker bindchange="regionChange" mode="region"  value="{{region}}">
-          <view class="picker">
-            {{region[0]}} {{region[1]}} {{region[2]}}
-          </view>
-        </picker>
+      <view class='inputBox clearfloat'>
+        <view>
+          <text class='full'>手机:</text>
+        </view>
+        <view>
+          <input type='text'></input>
+        </view>
       </view>
-    </view>
-    <view class='detailsAddress'>
-      <input type='text' placeholder="详细地址" placeholder-class='placeholder'></input>
-    </view>
-    <view class='inputBox clearfloat'>
-      <view>
-        <text class='full'>姓名:</text>
+      <view class='inputBox clearfloat'>
+        <view>
+          <text class='full1'>邀请码:</text>
+        </view>
+        <view>
+          <input type='text'></input>
+        </view>
       </view>
-      <view>
-        <input type='text'></input>
-      </view>
-    </view>
-    <view class='inputBox clearfloat'>
-      <view>
-        <text class='full'>手机:</text>
-      </view>
-      <view>
-        <input type='text'></input>
-      </view>
-    </view>
-    <view class='inputBox clearfloat'>
-      <view>
-        <text class='full1'>邀请码:</text>
-      </view>
-      <view>
-        <input type='text'></input>
-      </view>
-    </view>
-    <view class='comBtn'>确认预约</view>
+      <view class='comBtn' bindtap='comfirmBook'>确认预约</view>
     </form>
   </view>
-  <view class='closeAddress' bindtap='closeAddresses'><image src='../../images/close.png' mode='widthFix'></image> </view>
+  <view class='closeAddress' bindtap='closeAddresses'>
+    <image src='../../images/close.png' mode='widthFix'></image>
+  </view>
 </view>
 <view id='timeSelect' class='{{tsStatus==0?"tsDisplay":""}}'>
   <view>{{year}}年{{month}}月{{day}}日{{time}}-{{time+2}}时</view>
@@ -102,4 +104,52 @@
     </picker-view-column>
   </picker-view>
   <view class='comfirm' bindtap='closeSelect'>确定</view>
+</view>
+
+<!--弹窗-->
+<tips wx:if='{{tipStatus1}}'>
+  <text slot="tp1">您所在的城市暂不支持小程序预约，如想报名，可咨询当地完美分公司。</text>
+  <view slot="confrim" bindtap='closeTip'>确定</view>
+</tips>
+<tips wx:if='{{tipStatus2}}'>
+  <text slot="tp1">您所在的城市暂不支持小程序预约，如想报名，可咨询当地完美分公司。</text>
+  <view slot="confrim" style='width:48%;' bindtap='comfirmPop'>确定</view>
+  <view slot="cancel" style='width:48%;' bindtap='cancel'>取消</view>
+</tips>
+
+<view id='volunPop' wx:if ="{{vp}}">
+  <view class='volunPop' style='background-image:url("../../images/select.png")'>
+    <view class='volunTitle'>
+      <text>为您推荐的义工：</text>
+    </view>
+    <view class='swiperBox'>
+      <swiper interval="5000" duration="500" current="{{spIndex}}" display-multiple-items="3" circular="true" bindchange="changes">
+        <block wx:for="{{volunSrc}}" wx:key='index'>
+          <swiper-item data-index="{{index}}" bindtap='confrimVol'>
+            <image src="{{item.src}}" mode='widthFix'></image>
+            <text class='volName'>{{item.name}}</text>
+            <text class='volId'>编号：{{item.id}}</text>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class='left' bindtap='leftTap'>
+        <image src='../../images/left.png' mode='widthFix'></image>
+      </view>
+      <view class='right' bindtap='rightTap'>
+        <image src='../../images/left.png' mode='widthFix'></image>
+      </view>
+    </view>
+    <view class='myVolun'>
+      <text>我的义工：</text>
+      <view class='myVolunBox'>
+          <image src="{{myvolunteer.src}}" mode='widthFix'></image>
+          <text class='volName'>{{myvolunteer.name}}</text>
+          <text class='volId'>编号：{{myvolunteer.id}}</text>
+      </view>
+    </view>
+    <view class='tBtns clearfloat'>
+      <view bindtap='randomVol'>随机分配</view>
+      <view bindtap='cVolunteer'>确定</view>
+    </view>
+  </view>
 </view>

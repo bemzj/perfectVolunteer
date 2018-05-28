@@ -1,4 +1,8 @@
 {
   "navigationBarTitleText": "服务预约",
-  "navigationBarBackgroundColor":"#e2f7fa"
+  "navigationBarBackgroundColor":"#e2f7fa",
+  "usingComponents": {
+    "tips": "../public/public",
+    "tips1": "../public/public"
+  }
 }

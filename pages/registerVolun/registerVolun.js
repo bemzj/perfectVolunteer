@@ -20,7 +20,8 @@ Page({
         'city':"市",
         'area':"区"
       }
-    ]
+    ],
+    headsrc:'../../images/head.png'
   },
 
   /**

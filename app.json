@@ -1,10 +1,11 @@
 {
   "pages":[
-    
-    "pages/registerVolun/registerVolun",
     "pages/serverBook/serverBook",
-    "pages/register/register",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/registerVolun/registerVolun",
+    
+    "pages/register/register"
+    
     
   ],
   "window":{
