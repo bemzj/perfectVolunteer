@@ -1,6 +1,9 @@
 <!--pages/registerVolun/registerVolun.wxml-->
-<view id='main'style='background-image:url("../../images/rule_back.png")'>
+<view id='main' style='background-image:url("../../images/rule_back.png")'>
   <view class='main'>
+    <view class='head'>
+      <image src='../../images/head.png' mode='widthFix'></image>
+    </view>
     <view class='inputBox clearfloat'>
       <view class='textLeft'>
         <text>义工注册码</text>
@@ -14,7 +17,7 @@
         <text>义工编号</text>
       </view>
       <view class='inputRight'>
-        <input type='text'></input>
+        <input type='text' disabled></input>
       </view>
     </view>
     <view class='inputBox clearfloat'>
@@ -40,6 +43,26 @@
       <view class='inputRight'>
         <input type='idcard'></input>
       </view>
+    </view>
+    <view class='addressBoxs'>
+      <view class='addressBox'  wx:for='{{region}}' wx:key='index'>
+        <view class='inputBox clearfloat address' style='background-image:url("../../images/triangle.png")'>
+          <picker mode="region" bindchange="bindRegionChange" data-index='{{index}}' value="item">
+            <view class="picker">
+              {{item.province}} {{item.city}} {{item.area}}
+            </view>
+          </picker>
+        </view>
+        <view class='inputBox subtraction' wx:if='{{region.length-1!=index}}' data-index='{{index}}' bindtap='subtractionAddress'>
+          <view></view>
+        </view>
+        <view class='inputBox add' wx:else data-index='{{index}}' bindtap='addAddress'>
+          <image src='../../images/add.png' mode='widthFix'></image>
+        </view> 
+      </view>
+    </view>    
+    <view class='tips'>*服务区域可多选</view>
+    <view class='nowRegister'>立即登记
     </view>
   </view>
 </view>
