@@ -1,0 +1,9 @@
+<!--pages/personInfo/personInfo.wxml-->
+<view>
+    <view class="list1">
+        <view>
+            
+        </view>
+        <view></view>
+    </view>
+</view>
