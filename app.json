@@ -1,12 +1,11 @@
 {
   "pages":[
     "pages/serverBook/serverBook",
-    "pages/index/index",
-    "pages/registerVolun/registerVolun",
-    
-    "pages/register/register"
-    
-    
+    "pages/registerVolun/registerVolun",    
+    "pages/register/register",
+    "pages/personInfo/personInfo",
+    "pages/index/index"
+
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -31,7 +31,7 @@ Page({
       {
         url: '../../images/index_btn3.png',
         name: '个人中心',
-        link: '../../pages/register/register'
+        link: '../../pages/personInfo/personInfo'
       },
       {
         url: '../../images/index_btn4.png',
