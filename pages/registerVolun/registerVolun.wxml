@@ -1,5 +1,45 @@
 <!--pages/registerVolun/registerVolun.wxml-->
 <view id='main'style='background-image:url("../../images/rule_back.png")'>
   <view class='main'>
+    <view class='inputBox clearfloat'>
+      <view class='textLeft'>
+        <text>义工注册码</text>
+      </view>
+      <view class='inputRight'>
+        <input type='text'></input>
+      </view>
+    </view>
+    <view class='inputBox clearfloat'>
+      <view class='textLeft textLeft1'>
+        <text>义工编号</text>
+      </view>
+      <view class='inputRight'>
+        <input type='text'></input>
+      </view>
+    </view>
+    <view class='inputBox clearfloat'>
+      <view class='textLeft textLeft2'>
+        <text>姓名</text>
+      </view>
+      <view class='inputRight'>
+        <input type='text'></input>
+      </view>
+    </view>
+    <view class='inputBox clearfloat'>
+      <view class='textLeft textLeft3'>
+        <text>手机号码</text>
+      </view>
+      <view class='inputRight'>
+        <input type='number'></input>
+      </view>
+    </view>
+    <view class='inputBox clearfloat'>
+      <view class='textLeft textLeft4'>
+        <text>身份证</text>
+      </view>
+      <view class='inputRight'>
+        <input type='idcard'></input>
+      </view>
+    </view>
   </view>
 </view>
