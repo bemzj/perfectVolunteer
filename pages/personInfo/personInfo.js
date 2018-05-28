@@ -5,9 +5,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    status:1,
+    status:0,
+    headImg:'../../images/head01.png',
+    name:'王雯莉',
     volunteerNav:[
-      { image: '../../images/icon01.png', text:'新任务'},
+      { image: '../../images/icon01.png', text: '新任务', to: "../newTask/newTask"},
       { image: '../../images/icon02.png', text: '待完成任务' },
       { image: '../../images/icon03.png', text: '已完成任务' },
     ],
@@ -31,7 +33,12 @@ Page({
       { image: '../../images/icon17.png', text: '我的邀请码' },
     ]
   },
-
+  navTo:function(event){
+    let url = event.currentTarget.dataset.to;
+    wx.navigateTo({
+      url: url,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

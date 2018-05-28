@@ -1,5 +1,9 @@
 {
   "pages":[
+    "pages/completed/completed",
+    "pages/beforeComplete/beforeComplete",
+    "pages/newTaskDetail/newTaskDetail",
+    "pages/newTask/newTask",
     "pages/personInfo/personInfo",
     "pages/index/index",
     "pages/register/register",
