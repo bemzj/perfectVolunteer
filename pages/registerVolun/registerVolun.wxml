@@ -2,7 +2,10 @@
 <view id='main' style='background-image:url("../../images/rule_back.png")'>
   <view class='main'>
     <view class='head'>
-      <image src='../../images/head.png' mode='widthFix'></image>
+      <image src='{{headsrc}}' mode='widthFix'></image>
+      <view class='headText'>
+        <text>添加头像</text>
+      </view>
     </view>
     <view class='inputBox clearfloat'>
       <view class='textLeft'>

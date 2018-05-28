@@ -65,6 +65,42 @@ Page({
    */
   data: {
     swiperHeight: '200rpx',
+    tipStatus1:false,
+    tipStatus2:false,
+    vp:false,
+    volunSrc:[
+      {
+        'src': '../../images/volunteer.png',
+        'name':'王文杰0',
+        'id':'123456'
+      },
+      {
+        'src': '../../images/volunteer.png',
+        'name': '王文杰1',
+        'id': '123456'
+      },
+      {
+        'src': '../../images/volunteer.png',
+        'name': '王文杰2',
+        'id': '123456'
+      },
+      {
+        'src': '../../images/volunteer.png',
+        'name': '王文杰3',
+        'id': '123456'
+      },
+      {
+        'src': '../../images/volunteer.png',
+        'name': '王文杰4',
+        'id': '123456'
+      }
+    
+    ],
+    myvolunteer:{
+      'src': '../../images/volunteer.png',
+      'name': '王文杰4',
+      'id': '123456'
+    },
     swiper: {
       indicatorDots:'true',
       autoplay: 'true',
@@ -91,8 +127,9 @@ Page({
     time: date.getHours(),
     day: date.getDate(),
     value: [0, date.getMonth(), date.getDate() - 1, date.getHours()-9],
-    tsStatus:0,
-    serverStatus:0
+    tsStatus:false,
+    serverStatus:0,
+    spIndex:0
   },
   bindChange: function (e) {
     const val = e.detail.value;
@@ -117,22 +154,22 @@ Page({
   },
   closeSelect:function(){
     this.setData({
-      tsStatus:0
+      tsStatus: !this.data.tsStatus
     })
   },
   showSelect:function(){
     this.setData({
-      tsStatus: 1
+      tsStatus: !this.data.tsStatus
     })
   },
   showAddress: function () {
     this.setData({
-      serverStatus: 1
+      serverStatus: !this.data.serverStatus
     })
   },
   closeAddresses:function(){
     this.setData({
-      serverStatus: 0
+      serverStatus: !this.data.serverStatus
     })
   },
   /**
@@ -148,7 +185,9 @@ Page({
   onReady: function () {
   
   },
-
+  changes: function (event){
+    console.log(event);
+  },
   /**
    * 生命周期函数--监听页面显示
    */
@@ -197,5 +236,66 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  comfirmBook:function(){
+    this.setData({
+      serverStatus: !this.data.serverStatus,
+      tipStatus1: !this.data.tipStatus1
+    });
+  },
+  // 弹窗1取消
+  closeTip:function(){
+    this.setData({
+      tipStatus1: !this.data.tipStatus1
+    });
+  },
+  // 弹窗2取消
+  cancel: function () {
+    this.setData({
+      tipStatus2: !this.data.tipStatus2
+    });
+  },
+  // 弹窗2确定
+  comfirmPop:function(){
+    this.setData({
+      tipStatus2: !this.data.tipStatus2
+    });
+  },
+  leftTap:function(){
+    let spIndex = ++this.data.spIndex
+    if(spIndex == this.data.volunSrc.length)
+    {
+      spIndex=0;
+    }
+    this.setData({
+      spIndex: spIndex
+    });
+  },
+  rightTap: function () {
+    let spIndex = --this.data.spIndex
+    if (spIndex == -1) {
+      spIndex = this.data.volunSrc.length-1;
+    }
+    this.setData({
+      spIndex: spIndex
+    });
+  },
+  confrimVol:function(e){
+    var dataList = this.data.myvolunteer;
+    dataList = this.data.volunSrc[e.currentTarget.dataset.index];
+    this.setData({
+      myvolunteer: dataList
+    });
+  },
+  randomVol:function(){
+    var dataList = this.data.volunSrc[parseInt(Math.random()*this.data.volunSrc.length)];
+    this.setData({
+      myvolunteer: dataList
+    });
+  },
+  cVolunteer:function(){
+    this.setData({
+      vp: !this.data.vp
+    });
   }
 })

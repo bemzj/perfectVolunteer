@@ -21,12 +21,12 @@ Page({
       {
         url: '../../images/index_btn1.png',
         name:'义工登记',
-        link:'../../pages/register/register'
+        link:'../../pages/registerVolun/registerVolun'
       },
       {
         url: '../../images/index_btn2.png',
         name: '服务预约',
-        link: '../../pages/register/register'
+        link: '../../pages/serverBook/serverBook'
       },
       {
         url: '../../images/index_btn3.png',
