@@ -16,10 +16,10 @@ page{
   overflow: hidden;
 }
 .listBkg{
-  background-color: rgba(127,230,244,0.7);
+  background-color: #7fe6f4;
 }
 .list1{
-  width: 97.8%;
+  width: 100%;
   margin: auto;
   background-color: rgba(127,230,244,0.5);
   height: 165rpx;
@@ -40,7 +40,7 @@ page{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 75rpx 0 100rpx 0;
+  padding:100rpx 0 90rpx;
   position: relative;
   margin-bottom: 20rpx;
   width:103%;
@@ -77,42 +77,52 @@ page{
   padding: 25rpx 0;
   border-radius: 10rpx;
 }
-.serverSuccess{
-  width: 100%;
-  text-align: center;
-  line-height: 84rpx;
-  background-color: #93e9f3;
-  border-radius: 8rpx;
-  color: white;
-  font-size: 30rpx;
-  margin-top: 40rpx;
+.listBox{
+  background-color: white;
 }
 .list4{
-  margin-top: -20rpx;
-  padding-bottom: 40rpx;
+  padding-top: 10rpx;
+  padding-bottom: 30rpx;
 }
 .list4Title{
-  width: 100%;
+  width: 24%;
+  margin-left: 8%;
+  display: block;
+  font-size: 26rpx;
+  line-height: 45rpx;
+  float: left;
+}
+.myCode text{
   display: block;
   text-align: center;
-  font-size: 30rpx;
-  line-height: 60rpx;
+  font-size: 70rpx;
+  margin-bottom: 25rpx;
+  color: #3a3a3a;
+  letter-spacing: 10rpx;
+}
+.codeTips text{
+  display: block;
+  text-align: center;
+  font-size: 24rpx;
+  color: #a0a0a0;
 }
 .list4text{
-  width: 90%;
+  width: 60%;
+  float: left;
   margin: 0 auto;
   display: block;
   color: #333333;
-  font-size: 28rpx;
-  text-align: center;
+  font-size: 26rpx;
+  line-height: 45rpx;
+  text-align: justify;
 }
-.noNewDetails{
-  padding: 100rpx 0;
+.share{
+  width: 100%;
+  border-radius: 10rpx;
+  background-color: #93e9f3;
+  line-height: 85rpx;
   text-align: center;
-  font-size: 36rpx;
-}
-.noNewDetails text{
-  width: 90%;
-  display: block;
-  margin: 0 auto;
+  font-size: 30rpx;
+  color: white;
+  margin-top: 40rpx;
 }

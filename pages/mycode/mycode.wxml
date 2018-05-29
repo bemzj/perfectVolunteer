@@ -1,0 +1,27 @@
+<!--pages/newTaskDetail/newTaskDetail.wxml-->
+<view class='wrap' style='background:url("../../images/bj.png") no-repeat;background-size: 100% 100%;'>
+  <view class="list">
+    <view class='list1'>
+      <view>
+        <image mode='aspectFit' src='../../images/inviteCode.png'></image>
+      </view>
+    </view>
+    <view class='listBox'>
+      <view class='list2' style='background:url("../../images/bj04.png") no-repeat;background-size: 100% 100%;'>
+        <view>
+          <view class='myCode'>
+            <text>{{myCode}}</text>
+          </view>
+          <view class='codeTips'>
+            <text>请区分好字母大小写哦~</text>
+          </view>
+        </view>
+      </view>
+      <view class='list4 clearfloat'>
+        <text class='list4Title'>温馨提示：</text>
+        <text class='list4text'>只要两位好友使用您的邀请码下单预约，您就能再获得一次免费名额哦！赶紧把邀请码分享给好友吧!</text>
+      </view>
+    </view>
+    <button  open-type='share' class='share' send-message-title="双击666">分享邀请码</button>
+  </view>
+</view>

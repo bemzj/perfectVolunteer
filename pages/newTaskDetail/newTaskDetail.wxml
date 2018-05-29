@@ -1,11 +1,31 @@
 <!--pages/newTaskDetail/newTaskDetail.wxml-->
-<view class='wrap' style='background:url("../../images/bj.png") no-repeat;background-size: 100% 100%;'>
-  <view class='list'>
+<!--暂无新情况 -->
+<view class='wrap' wx:if="{{user_type=='U'&&status=='0'}}" style='background:url("../../images/bj.png") no-repeat;background-size: 100% 100%;'>
+  <view class="list" >
     <view class='list1'>
       <view>
-        <image mode='aspectFit' src='../../images/bj03.png'></image>
+        <image mode='aspectFit' src='../../images/tipTitles.png'></image>
       </view>
     </view>
+    <view class='list2' style='background:url("../../images/bj04.png") no-repeat;background-size: 100% 100%;'>
+      <view>
+        <view>
+          <view class='noNewDetails'>
+            <text>很抱歉！暂无最新预约详情！</text>
+          </view>
+        </view>
+      </view>  
+    </view>
+  </view>
+</view>
+<view class='wrap' wx:else style='background:url("../../images/bj.png") no-repeat;background-size: 100% 100%;'>
+  <view class="list" >
+    <view class='list1'>
+      <view>
+        <image mode='aspectFit' src='../../images/bookTitle.png'></image>
+      </view>
+    </view>
+    <view class=" {{user_type=='U'&&bookStatus==1||user_type=='U'&&bookStatus==2?'listBkg':''}}">
     <view class='list2' style='background:url("../../images/bj04.png") no-repeat;background-size: 100% 100%;'>
       <view>
         <view>
@@ -13,23 +33,26 @@
             <text>{{detailData.name == ''?'用户':detailData.name}}</text>
           </view>
           <view>
-            <text>联系电话：{{detailData.phone == ''?'000-0000-0000':detailData.phone}}</text>
+            <text>联系电话：</text><text>{{detailData.phone == ''?'000-0000-0000':detailData.phone}}</text>
           </view>
           <view>
-            <text>预约时间：{{detailData.date == ''?'2000年5月20日，13-15时':detailData.date}}</text>
+            <text>预约时间：</text><text>{{detailData.date == ''?'2000年5月20日，13-15时':detailData.date}}</text>
           </view>
           <view>
-            <text>服务地址：{{detailData.address == ''?'地址':detailData.address}}</text>
+            <text>服务地址：</text><text>{{detailData.address == ''?'地址':detailData.address}}</text>
           </view>
           <view>
-            <text>服务事项：{{detailData.matter == ''?'空调':detailData.matter}}</text>
+            <text>服务事项：</text><text>{{detailData.matter == ''?'空调':detailData.matter}}</text>
           </view>
+          <view class='serverSuccess'  wx:if="{{user_type=='U'&&bookStatus==1}}">服务完成</view>
         </view>
-      </view>
+      </view>  
     </view>
-    <view class='list3'>
-      <view>拒绝</view>
-      <view>接受</view>
+    <view class='list4'  wx:if="{{user_type=='U'&&bookStatus==1||user_type=='U'&&bookStatus==2}}">
+      <text class='list4Title'>————温馨提示————</text>
+      <text class='list4text'>{{detailData.msg}}</text>
     </view>
+    </view>
+    
   </view>
 </view>
