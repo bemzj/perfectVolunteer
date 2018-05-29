@@ -3,14 +3,15 @@
     "pages/myCard/myCard",
     "pages/proposal/proposal",
     "pages/personInfo/personInfo",
-    "pages/beforeComplete/beforeComplete",
     "pages/newTaskDetail/newTaskDetail",
+    "pages/completed/completed",
+    "pages/beforeComplete/beforeComplete",
+    "pages/mycode/mycode",
     "pages/newTask/newTask",
     "pages/index/index",
     "pages/register/register",
     "pages/serverBook/serverBook",
-    "pages/registerVolun/registerVolun",
-    "pages/completed/completed"
+    "pages/registerVolun/registerVolun"
   ],
   "window":{
     "backgroundTextStyle":"light",
