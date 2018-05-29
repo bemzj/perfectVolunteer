@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/hisComment/hisComment",
     "pages/myCard/myCard",
     "pages/proposal/proposal",
     "pages/personInfo/personInfo",

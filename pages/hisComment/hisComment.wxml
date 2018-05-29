@@ -1,0 +1,23 @@
+<view class='wrap'>
+  <view class='list' wx:for='{{dataList}}' wx:for-index='idx' wx:for-item='item' wx:key='{{idx}}'>
+    <view>
+      <view>
+        <image mode='scaleToFill' src='{{item.image}}'></image>
+      </view>
+      <view>
+        <view class='client'>
+          <text>{{item.client}}</text>
+        </view>
+        <view class='date'>
+          <text>{{item.date}}</text>
+        </view>
+        <view class='comment'>
+          <text>{{item.comment}}</text>
+        </view>
+      </view>
+    </view>
+    <view data-index='{{idx}}' bindtap='tixing'>
+      
+    </view>
+  </view>
+</view>
