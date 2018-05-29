@@ -1,0 +1,22 @@
+<!--pages/completed/completed.wxml-->
+<view class='wrap'>
+  <view class='list' wx:for='{{dataList}}' wx:for-index='idx' wx:for-item='item' wx:key='{{idx}}'>
+    <view>
+      <view>
+        <image mode='scaleToFill' src='{{item.image}}'></image>
+      </view>
+      <view>
+        <view>
+          <text>{{item.client}}</text>
+        </view>
+        <view>
+          <text>{{item.date}}</text>
+        </view>
+      </view>
+    </view>
+    <view>
+      <icon data-index='{{index}}' style='background: url("{{index == 0?"../../images/icon18.png":"../../images/icon18_sel.png"}}") no-repeat center center;background-size:100% 100%;'></icon>
+      <text>提醒评价</text>
+    </view>
+  </view>
+</view>

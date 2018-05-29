@@ -1,0 +1,67 @@
+/* pages/newTaskDetail/newTaskDetail.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+.wrap{
+  width: 100%;
+  height: 100%;
+}
+.list{
+  width: 85%;
+  margin: auto;
+  position: relative;
+  top: 140rpx;
+}
+.list1{
+  width: 97.8%;
+  margin: auto;
+  background-color: rgba(127,230,244,0.5);
+  height: 165rpx;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.list1 >view{
+  width: 60%;
+  height: 100%;
+}
+.list1 >view image{
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+.list2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 75rpx 0 110rpx 0;
+  position: relative;
+  margin-bottom: 20rpx;
+}
+.list2 text{
+  font-size: 26rpx;
+  color: #646262;
+}
+.list2 .name{
+  margin-bottom: 15rpx;
+}
+.list2 .name text{
+  font-size: 36rpx;
+  color: #333333;
+  font-weight: bold;
+}
+.list3{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.list3 view{
+  width: 48%;
+  font-size: 28rpx;
+  color: #000000;
+  background-color: #93e9f3;
+  text-align: center;
+  padding: 25rpx 0;
+  border-radius: 10rpx;
+}

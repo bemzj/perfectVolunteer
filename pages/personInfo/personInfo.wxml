@@ -3,16 +3,16 @@
   <view class="list1" style='background:url("../../images/bj01.png") no-repeat top left;background-size: 100% 100%;'>
     <view class='l1-1'>
       <view>
-        <image mode='scaleToFill' src="../../images/head01.png"></image>
+        <image mode='scaleToFill' src="{{headImg == ''?'../../images/head.png':headImg}}"></image>
       </view>
       <view>
-        <text>王雯莉</text>
+        <text>{{name == ''?'用户':'王雯莉'}}</text>
       </view>
     </view>
     <block wx:if='{{status == 0}}'>
       <view class='l1-2'>
         <view class='l1-2Wrap'>
-          <view wx:for='{{volunteerNav}}' wx:for-index='idx' wx:for-item='item' wx:key='{{idx}}'>
+          <view wx:for='{{volunteerNav}}' wx:for-index='idx' wx:for-item='item' wx:key='{{idx}}'  data-to='{{item.to}}' bindtap='navTo'>
             <view>
               <image src='{{item.image}}'></image>
             </view>
@@ -26,7 +26,7 @@
     <block wx:if='{{status == 1}}'>
       <view class='l1-2'>
         <view class='l1-2Wrap'>
-          <view wx:for='{{clientNav}}' wx:for-index='idx' wx:for-item='item' wx:key='{{idx}}'>
+          <view wx:for='{{clientNav}}' wx:for-index='idx' wx:for-item='item' wx:key='{{idx}}'  data-to='{{item.to}}' bindtap='navTo'>
             <view>
               <image src='{{item.image}}'></image>
             </view>
