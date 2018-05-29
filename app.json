@@ -1,14 +1,16 @@
 {
   "pages":[
-    "pages/completed/completed",
+    "pages/myCard/myCard",
+    "pages/proposal/proposal",
+    "pages/personInfo/personInfo",
     "pages/beforeComplete/beforeComplete",
     "pages/newTaskDetail/newTaskDetail",
     "pages/newTask/newTask",
-    "pages/personInfo/personInfo",
     "pages/index/index",
     "pages/register/register",
     "pages/serverBook/serverBook",
-    "pages/registerVolun/registerVolun"
+    "pages/registerVolun/registerVolun",
+    "pages/completed/completed"
   ],
   "window":{
     "backgroundTextStyle":"light",

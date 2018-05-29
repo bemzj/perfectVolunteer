@@ -1,4 +1,5 @@
 // pages/personInfo/personInfo.js
+var app = getApp();
 Page({
 
   /**

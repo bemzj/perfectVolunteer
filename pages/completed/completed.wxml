@@ -14,8 +14,9 @@
         </view>
       </view>
     </view>
-    <view>
-      <icon data-index='{{index}}' style='background: url("{{index == 0?"../../images/icon18.png":"../../images/icon18_sel.png"}}") no-repeat center center;background-size:100% 100%;'></icon>
+    <view data-index='{{idx}}' bindtap='tixing'>
+      <icon wx:if='{{item.urge == 1}}' style='background: url("../../images/icon18_sel.png") no-repeat center center;background-size:100% 100%;'></icon>
+      <icon wx:else style='background: url("../../images/icon18.png") no-repeat center center;background-size:100% 100%;'></icon>
       <text>提醒评价</text>
     </view>
   </view>

@@ -1,23 +1,25 @@
-// pages/completed/completed.js
+// pages/proposal/proposal.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    dataList: [
-      { image: '../../images/head01.png', client: '陈小姐', date: '2018.06.02',urge:1 },
-      { image: '../../images/head01.png', client: '陈小姐', date: '2018.06.02', urge: 0 },
-      { image: '../../images/head01.png', client: '陈小姐', date: '2018.06.02', urge: 0 },
-      { image: '../../images/head01.png', client: '陈小姐', date: '2018.06.02', urge: 0 }
-    ],
-    index1:null
+    writing:false,
+    user_type:'V'
   },
-  tixing:function(e){
-    // let num = e.currentTarget.dataset.index
-    // this.setData({
-    //   index1:num
-    // })
+  write:function(e){
+    this.setData({
+      writing:true
+    })
+  },
+  showIt:function(e){
+    console.log(e)
+    if(e.detail.value ==  ''){
+      this.setData({
+        writing:false
+      })
+    }
   },
   /**
    * 生命周期函数--监听页面加载

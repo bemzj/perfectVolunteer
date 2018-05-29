@@ -1,24 +1,18 @@
-// pages/completed/completed.js
+// pages/myCard/myCard.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    dataList: [
-      { image: '../../images/head01.png', client: '陈小姐', date: '2018.06.02',urge:1 },
-      { image: '../../images/head01.png', client: '陈小姐', date: '2018.06.02', urge: 0 },
-      { image: '../../images/head01.png', client: '陈小姐', date: '2018.06.02', urge: 0 },
-      { image: '../../images/head01.png', client: '陈小姐', date: '2018.06.02', urge: 0 }
-    ],
-    index1:null
+    detailData: {
+      name: '王文杰',
+      phone: '136728398765',
+      serial: 'xxxxxx',
+      address: '广州市海珠区新港街道2号'
+    }
   },
-  tixing:function(e){
-    // let num = e.currentTarget.dataset.index
-    // this.setData({
-    //   index1:num
-    // })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */

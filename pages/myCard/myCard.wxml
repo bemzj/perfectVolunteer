@@ -1,0 +1,34 @@
+<view class='wrap' style='background:url("../../images/bj.png") no-repeat;background-size: 100% 100%;'>
+  <view class='list'>
+    <view class='list1'>
+      <view>
+        <image mode='aspectFit' src='../../images/bj03.png'></image>
+      </view>
+    </view>
+    <view class='list2' style='background:url("../../images/bj04.png") no-repeat;background-size: 100% 100%;'>
+      <view>
+        <view>
+          <view class='name'>
+            <text>{{detailData.name == ''?'用户':detailData.name}}</text>
+          </view>
+          <view>
+            <text>联系电话：{{detailData.phone == ''?'000-0000-0000':detailData.phone}}</text>
+          </view>
+          <view>
+            <text>义工编号：{{detailData.serial == ''?'xxxxxx':detailData.serial}}</text>
+          </view>
+          <view>
+            <text>服务地址：</text><text>{{detailData.address == ''?'地址':detailData.address}}</text>
+          </view>
+          <view class='head'>
+            <image src='../../images/volunteer.png' mode='widthFix'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='list4'></view>
+    <view class='list3'>
+      <view>修改名片</view>
+    </view>
+  </view>
+</view>
