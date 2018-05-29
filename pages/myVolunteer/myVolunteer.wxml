@@ -1,0 +1,62 @@
+<view class='wrap'>
+  <view class='list' wx:for='{{dataList}}' wx:for-index='idx' wx:for-item='item' wx:key='{{idx}}'>
+    <view>
+      <view>
+        <image mode='scaleToFill' src='{{item.image}}'></image>
+      </view>
+      <view>
+        <view class=''>
+          <text>{{item.client}}</text>
+        </view>
+        <view>
+          <text>服务时间： {{item.date}}</text>
+        </view>
+        <view>
+          <text>服务事项： {{item.event01}}</text>
+        </view>
+      </view>
+    </view>
+    <view bindtap='click01'>
+      <text>去预约</text>
+    </view>
+  </view>
+</view>
+
+<view id='volunteerCard' wx:if='{{popUp}}'>
+  <view>
+    <view class='list'>
+      <view class='list1'>
+        <view>
+          <image mode='aspectFit' src='../../images/bj03.png'></image>
+        </view>
+      </view>
+      <view class='list2-wrap' style='background:url("../../images/bj04.png") no-repeat;background-size: 100% 100%;'>
+        <view class='list2' >
+        <view>
+          <view>
+            <view class='name'>
+              <text>{{detailData.name == ''?'用户':detailData.name}}</text>
+            </view>
+            <view>
+              <text>电话：{{detailData.phone == ''?'000-0000-0000':detailData.phone}}</text>
+            </view>
+            <view>
+              <text>义工编号：{{detailData.serial == ''?'xxxxxx':detailData.serial}}</text>
+            </view>
+            <view>
+              <text>服务地址：</text>
+              <text>{{detailData.address == ''?'地址':detailData.address}}</text>
+            </view>
+            <view class='head'>
+              <image src='../../images/volunteer.png' mode='widthFix'></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='list3'>
+        <view bindtap='btn01'>确定</view>
+      </view>
+      </view>
+    </view>
+  </view>
+</view>

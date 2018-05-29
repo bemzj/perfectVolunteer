@@ -1,0 +1,23 @@
+<view class='wrap'>
+  <view class='list' wx:for='{{dataList}}' wx:for-index='idx' wx:for-item='item' wx:key='{{idx}}'>
+    <view>
+      <view>
+        <image mode='scaleToFill' src='{{item.image}}'></image>
+      </view>
+      <view>
+        <view class=''>
+          <text>{{item.client}}</text>
+        </view>
+        <view>
+          <text>服务时间： {{item.date}}</text>
+        </view>
+        <view>
+          <text>服务事项： {{item.event01}}</text>
+        </view>
+      </view>
+    </view>
+    <view>
+      <text>绑定义工</text>
+    </view>
+  </view>
+</view>
