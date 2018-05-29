@@ -1,0 +1,103 @@
+/* pages/newTaskDetail/newTaskDetail.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+.wrap{
+  width: 100%;
+  height: 100%;
+}
+.list{
+  width: 85%;
+  margin: auto;
+  position: relative;
+  top: 140rpx;
+}
+.list1{
+  width: 97.8%;
+  margin: auto;
+  background-color: rgba(127,230,244,0.5);
+  height: 165rpx;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.list1 >view{
+  width: 60%;
+  height: 100%;
+}
+.list1 >view image{
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+.list2{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 75rpx 50rpx 110rpx 50rpx;
+  position: relative;
+  margin-bottom: 20rpx;
+  z-index: 100;
+}
+.list2 >view{
+  width: 100%;
+}
+.list2 >view >view{
+  width: 100%;
+}
+.list2 >view >view >view{
+  display: flex;
+  margin-bottom: 15rpx;
+}
+.list2 >view >view >view text:first-child{
+  min-width: 130rpx;
+}
+.list2 text{
+  font-size: 26rpx;
+  color: #646262;
+}
+.list2 .name{
+  margin-bottom: 30rpx;
+}
+.list2 .head{
+  width: 160rpx;
+  height: 160rpx;
+  border: 1px solid #1d3600;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  right: 60rpx;
+  top: 55rpx;
+}
+.list2 .name text{
+  font-size: 36rpx;
+  color: #333333;
+  font-weight: bold;
+}
+.list3{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.list3 view{
+  width: 98%;
+  margin: auto;
+  font-size: 28rpx;
+  color: #fff;
+  background-color: #93e9f3;
+  text-align: center;
+  padding: 25rpx 0;
+  border-radius: 10rpx;
+}
+.list4{
+  width: 97.9%;
+  margin: auto;
+  height: 50rpx;
+  background-color: #fff;
+  position: relative;
+  margin-top: -25rpx;
+  margin-bottom: 70rpx;
+  border-radius: 0 0 10rpx 10rpx;
+}

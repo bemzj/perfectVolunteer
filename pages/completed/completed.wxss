@@ -22,7 +22,7 @@ page{
 }
 .list >view{
   text-align: center;
-  padding: 35rpx 0;
+  padding: 60rpx 0;
 }
 .list >view:first-child{
   width: 70%;
@@ -68,5 +68,5 @@ page{
 .list >view:last-child icon{
   width: 30rpx;
   height: 35rpx;
-
+  margin-right: 20rpx;
 }

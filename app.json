@@ -1,17 +1,17 @@
 {
   "pages":[
-    "pages/mycode/mycode",
-    "pages/newTaskDetail/newTaskDetail",
+    "pages/customer/customer",
     "pages/completed/completed",
-    "pages/beforeComplete/beforeComplete",
-    
-    "pages/newTask/newTask",
+    "pages/mycode/mycode",    
+    "pages/proposal/proposal",
     "pages/personInfo/personInfo",
+    "pages/newTaskDetail/newTaskDetail",   
+    "pages/beforeComplete/beforeComplete",    
+    "pages/newTask/newTask",
     "pages/index/index",
     "pages/register/register",
     "pages/serverBook/serverBook",
     "pages/registerVolun/registerVolun"
-    
   ],
   "window":{
     "backgroundTextStyle":"light",

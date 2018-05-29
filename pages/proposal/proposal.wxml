@@ -1,0 +1,21 @@
+<view class='wrap' style='background:url("../../images/bj.png") no-repeat;background-size: 100% 100%;'>
+  <view class='list'>
+    <view class='list1'>
+      <view>
+        <image mode='aspectFit' src='../../images/title01.png'></image>
+      </view>
+    </view>
+    <view class='list2' style='background: #ffffff;border-radius: 20rpx;border:1px solid #ede8e8;'>
+      <view bindtap='write'>
+        <textarea bindblur='showIt'></textarea>
+        <image wx:if='{{writing == false}}' mode='widthFix' src='../../images/bj05.png'></image>
+      </view>
+    </view>
+    <view class='list-text' wx:if='{{user_type == "V"}}'>
+      <text>如您的建议被采纳，将收到一份精美礼品哦！</text>
+    </view>
+    <view class='list3'>
+      <view>确定接受</view>
+    </view>
+  </view>
+</view>
