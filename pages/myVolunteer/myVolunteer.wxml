@@ -27,7 +27,7 @@
     <view class='list'>
       <view class='list1'>
         <view>
-          <image mode='aspectFit' src='../../images/bj03.png'></image>
+          <image mode='aspectFit' src='../../images/title03.png'></image>
         </view>
       </view>
       <view class='list2-wrap' style='background:url("../../images/bj04.png") no-repeat;background-size: 100% 100%;'>

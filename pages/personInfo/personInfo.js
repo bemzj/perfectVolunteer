@@ -11,13 +11,13 @@ Page({
     name:'王雯莉',
     volunteerNav:[
       { image: '../../images/icon01.png', text: '新任务', to: "../newTask/newTask"},
-      { image: '../../images/icon02.png', text: '待完成任务' },
-      { image: '../../images/icon03.png', text: '已完成任务' },
+      { image: '../../images/icon02.png', text: '待完成任务', to: "../beforeComplete/beforeComplete" },
+      { image: '../../images/icon03.png', text: '已完成任务', to: "../completed/completed" },
     ],
     volunteerList:[
-      { image: '../../images/icon04.png', text: '金点子' },
-      { image: '../../images/icon05.png', text: '我的名片' },
-      { image: '../../images/icon06.png', text: '我的顾客' },
+      { image: '../../images/icon04.png', text: '金点子', to: "../proposal/proposal"},
+      { image: '../../images/icon05.png', text: '我的名片', to: "../myCard/myCard" },
+      { image: '../../images/icon06.png', text: '我的顾客', },
       { image: '../../images/icon07.png', text: '历史评价' },
     ],
     clientNav:[

@@ -1,11 +1,11 @@
 {
   "pages":[
+    "pages/personInfo/personInfo",
     "pages/myVolunteer/myVolunteer",
     "pages/serveHis/serveHis",
     "pages/hisComment/hisComment",
     "pages/myCard/myCard",
     "pages/proposal/proposal",
-    "pages/personInfo/personInfo",
     "pages/newTaskDetail/newTaskDetail",
     "pages/completed/completed",
     "pages/beforeComplete/beforeComplete",
