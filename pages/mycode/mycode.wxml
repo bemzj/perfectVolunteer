@@ -10,7 +10,7 @@
       <view class='list2' style='background:url("../../images/bj04.png") no-repeat;background-size: 100% 100%;'>
         <view>
           <view class='myCode'>
-            <text>{{myCode}}</text>
+            <text bindtap='getCode'>{{myCode}}</text>
           </view>
           <view class='codeTips'>
             <text>请区分好字母大小写哦~</text>

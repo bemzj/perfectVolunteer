@@ -63,5 +63,18 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  getCode:function(){
+    var self = this;
+    wx.setClipboardData({
+      data: self.data.myCode,
+      success: function (res) {
+        wx.getClipboardData({
+          success: function (res) {
+            console.log(res.data) // data
+          }
+        })
+      }
+    })
   }
 })

@@ -15,8 +15,8 @@ Page({
       msg: '您已预约成功，请保持手机畅通，方便义工与您联系。祝生活愉快！'
     },
     status:1,
-    user_type:'U',//登录类型
-    bookStatus:2,//预约类型
+    user_type:'',//登录类型
+    bookStatus:null,//预约类型
     bookTitle: ["预约中","预约成功","预约失败"]
   },
 
@@ -24,14 +24,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var num = parseInt(options.bookStatus);
+    console.log(num);
     var navTitle = "";
+    this.setData({
+      user_type: options.user_type,
+      bookStatus: num
+    })
     if (this.data.user_type=='V')
     {
       navTitle = "新任务详情";
     }else{
       navTitle = this.data.bookTitle[this.data.bookStatus];
     }
-    
     wx.setNavigationBarTitle({
       title: navTitle//页面标题为路由参数
     })

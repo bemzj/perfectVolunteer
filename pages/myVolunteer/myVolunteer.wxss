@@ -61,6 +61,9 @@ page{
   padding: 30rpx 0;
   margin-right: 20rpx;
 }
+.wrap .list >view.gray{
+  background-color: #e5e5e5!important;
+}
 .wrap .list >view:last-child text{
   display: block;
 }
@@ -80,13 +83,18 @@ page{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  -webkit-flex-direction: column;
 }
 #volunteerCard .list{
   width: 85%;
   position: relative;
 }
 #volunteerCard .list1{
-  width: 97.8%;
+  width: 100%;
   margin: auto;
   background-color: #7fe6f4;
   height: 165rpx;
@@ -164,6 +172,18 @@ page{
   border-radius: 10rpx;
 }
 #volunteerCard .list2-wrap{
+  background:no-repeat left bottom;
+  background-color: white;  
   padding: 55rpx 70rpx 100rpx 70rpx;
   margin-top: -10rpx;
+  background-size: 100% auto;
+  border-radius: 0 0rpx 10rpx 10rpx; 
+}
+.closePop{
+  width: 64rpx;
+  font-size: 0rpx;
+  margin-top: 20rpx;
+}
+.closePop image{
+  width: 100%;
 }
