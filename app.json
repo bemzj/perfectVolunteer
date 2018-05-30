@@ -1,8 +1,10 @@
 {
   "pages":[
+    "pages/hisComment/hisComment",
     "pages/customer/customer",
     "pages/completed/completed",
     "pages/mycode/mycode",    
+    "pages/myCard/myCard",
     "pages/proposal/proposal",
     "pages/personInfo/personInfo",
     "pages/newTaskDetail/newTaskDetail",   

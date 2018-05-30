@@ -1,0 +1,44 @@
+
+<!--pages/completed/completed.wxml-->
+<view class='wrap'>
+  <view class='list' wx:for='{{dataList}}' wx:for-index='idx' wx:for-item='item' wx:key='{{idx}}'>
+    <view>
+      <view class='head'>
+        <image mode='scaleToFill' src='{{item.image}}'></image>
+      </view>
+      <view class='msg'>
+        <view>
+          <text>{{item.client}}</text>
+        </view>
+        <view>
+          <text>{{item.date}}</text>
+        </view>
+         <view>
+          <text>{{item.comment}}</text>
+        </view> 
+        <view class='starAndText' wx:if="{{item.comment!=''}}">
+          <view class='starBox'>
+            <view wx:for='{{5}}'wx:key="{{index}}"  wx:for-item='items'>
+              <image wx:if="{{index<item.star}}" src='../../images/star01.png' mode='widthFix'></image>
+              <image wx:else src='../../images/star02.png' mode='widthFix'></image>
+            </view>
+          </view>
+          <view class='starText'><text>已评价</text>
+          </view>
+        </view>
+        <view class='comments' wx:else>
+             <view class='noTips' wx:if="{{item.status==0}}">
+              <text>去评价</text>
+            </view> 
+            <view class='hasTips' wx:else>
+              <text style='background-image:url("../../images/icon18_sel.png");'>义工邀请评价提醒</text>
+            </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view id='popComment'>
+  
+</view>
+
