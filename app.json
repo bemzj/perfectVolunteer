@@ -1,5 +1,7 @@
 {
   "pages":[
+    "pages/myVolunteer/myVolunteer",
+    "pages/serveHis/serveHis",
     "pages/hisComment/hisComment",
     "pages/customer/customer",
     "pages/completed/completed",

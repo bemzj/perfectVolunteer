@@ -1,0 +1,169 @@
+/* pages/myVolunteer/myVolunteer.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+.wrap{
+  width: 100%;
+  height: 100%;
+  background-color: #eaf9fa;
+  padding-top: 50rpx;
+}
+.wrap .list{
+  width: 85%;
+  background-color: #ffffff;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 10px rgba(222,222,222,0.4);
+  margin-bottom: 40rpx;
+}
+.wrap .list >view{
+  text-align: center;
+}
+.wrap .list >view:first-child{
+  width: 70%;
+  font-size: 24rpx;
+  text-align: left;
+  padding-left: 45rpx;
+  display: flex;
+  align-items: center;
+  padding: 25rpx 0 25rpx 20rpx;
+}
+.wrap .list >view:first-child >view:first-child{
+  width: 115rpx;
+  height: 115rpx;
+  border: 1px solid #55683f;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20rpx;
+}
+.wrap .list >view:first-child >view:last-child{
+  font-size: 24rpx;
+  color: #383837;
+}
+.wrap .list >view:first-child >view:last-child >view{
+  margin-bottom: 10rpx;
+}
+.wrap .list >view:first-child >view:last-child view:first-child{
+  font-size: 33rpx;
+}
+.wrap .list >view:first-child >view:first-child image{
+  width: 100%;
+  height: 100%;
+}
+.wrap .list >view:last-child{
+  width: 30%;
+  background-color: #8fe8f4;
+  color: #fff;
+  font-size: 30rpx;
+  padding: 30rpx 0;
+  margin-right: 20rpx;
+}
+.wrap .list >view:last-child text{
+  display: block;
+}
+
+#volunteerCard{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+#volunteerCard >view{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#volunteerCard .list{
+  width: 85%;
+  position: relative;
+}
+#volunteerCard .list1{
+  width: 97.8%;
+  margin: auto;
+  background-color: #7fe6f4;
+  height: 165rpx;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rpx 10rpx 0 0;
+}
+#volunteerCard .list1 >view{
+  width: 65%;
+  height: 100%;
+}
+#volunteerCard .list1 >view image{
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+#volunteerCard .list2{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20rpx;
+  z-index: 100;
+}
+#volunteerCard .list2 >view{
+  width: 100%;
+}
+#volunteerCard .list2 >view >view{
+  width: 100%;
+}
+#volunteerCard .list2 >view >view >view{
+  display: flex;
+  margin-bottom: 20rpx;
+}
+#volunteerCard .list2 >view >view >view text:first-child{
+  min-width: 100rpx;
+}
+#volunteerCard .list2 text{
+  font-size: 26rpx;
+  color: #646262;
+}
+#volunteerCard .list2 .name{
+  margin-bottom: 30rpx;
+}
+#volunteerCard .list2 .head{
+  width: 160rpx;
+  height: 160rpx;
+  border: 1px solid #1d3600;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  right: 0rpx;
+  top: 0rpx;
+}
+#volunteerCard .list2 .name text{
+  font-size: 36rpx;
+  color: #333333;
+  font-weight: bold;
+}
+#volunteerCard .list3{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#volunteerCard .list3 view{
+  width: 98%;
+  margin: auto;
+  font-size: 28rpx;
+  color: #fff;
+  background-color: #93e9f3;
+  text-align: center;
+  padding: 25rpx 0;
+  border-radius: 10rpx;
+}
+#volunteerCard .list2-wrap{
+  padding: 55rpx 70rpx 100rpx 70rpx;
+  margin-top: -10rpx;
+}
