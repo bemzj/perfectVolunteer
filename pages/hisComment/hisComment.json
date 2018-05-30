@@ -1,4 +1,8 @@
 {
-  "navigationBarTitleText": "历史评价",
-  "navigationBarBackgroundColor": "#eaf9fa"
+  "navigationBarTitleText": "",
+  "navigationBarBackgroundColor": "#eaf9fa",
+  "usingComponents": {
+    "tips": "../public/public",
+    "tips1": "../public/public"
+  }
 }
