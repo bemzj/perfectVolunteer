@@ -7,13 +7,18 @@ Page({
   data: {
     status:0,
     dataList:[
-      { text:'您有新的任务1~'},
-      { text: '您有新的任务2~' },
-      { text: '您有新的任务3~' },
-      { text: '您有新的任务4~' }
+      { text: '您有新的任务1~', to: "../newTaskDetail/newTaskDetail?user_type=V"},
+      { text: '您有新的任务2~', to: "../newTaskDetail/newTaskDetail?user_type=V"},
+      { text: '您有新的任务3~', to: "../newTaskDetail/newTaskDetail?user_type=V"},
+      { text: '您有新的任务4~', to: "../newTaskDetail/newTaskDetail?user_type=V"}
     ]
   },
-
+  navTo(e){
+    let url = e.currentTarget.dataset.to
+    wx.navigateTo({
+      url: url
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

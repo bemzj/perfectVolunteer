@@ -6,35 +6,24 @@ Page({
    */
   data: {
     dataList: [
-      { image: '../../images/head01.png', client: '陈小姐', tel: '15999911956', date: '2018.06.02', comment: "",'star':5 ,status:0},
-      { image: '../../images/head01.png', client: '陈小姐', tel: '15999911956', date: '2018.06.02', comment: "", 'star': 4,status: 1},
-      { image: '../../images/head01.png', client: '陈小姐', tel: '15999911956', date: '2018.06.02', comment: "广东金融学院广东金融学院广东金融学院", 'star': 4,status: 0},
-      { image: '../../images/head01.png', client: '陈小姐', tel: '15999911956', date: '2018.06.02', comment: "广东金融学院广东金融学院广东金融学院广东金融学院广东金融学院广东金融学院", 'star': 3,status: 0}
+      { image: '../../images/head01.png', client: '陈小姐',tel:'15999911956', date: '2018.06.02', address: "广东金融学院广东金融学院" },
+      { image: '../../images/head01.png', client: '陈小姐', tel: '15999911956', date: '2018.06.02', address: "广东金融学院广东金融学院广东金融学院" },
+      { image: '../../images/head01.png', client: '陈小姐', tel: '15999911956', date: '2018.06.02', address: "广东金融学院广东金融学院广东金融学院" },
+      { image: '../../images/head01.png', client: '陈小姐', tel: '15999911956', date: '2018.06.02', address: "广东金融学院广东金融学院广东金融学院广东金融学院广东金融学院广东金融学院" }
     ],
-    index1: null,
-    user_type:'U'
+    index1: null
   },
   tixing: function (e) {
     // let num = e.currentTarget.dataset.index
     // this.setData({
     //   index1:num
     // })
-    
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var navTitle = "";
-    if (this.data.user_type == 'V') {
-      navTitle = "历史评价";
-    } else {
-      navTitle = "我的评价";
-    }
 
-    wx.setNavigationBarTitle({
-      title: navTitle//页面标题为路由参数
-    })
   },
 
   /**

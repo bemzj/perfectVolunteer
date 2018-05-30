@@ -1,17 +1,18 @@
 {
   "pages":[
+    "pages/index/index",
     "pages/personInfo/personInfo",
     "pages/myVolunteer/myVolunteer",
     "pages/serveHis/serveHis",
     "pages/hisComment/hisComment",
+    "pages/newTaskDetail/newTaskDetail",
+    "pages/customer/customer",
+    "pages/completed/completed",
+    "pages/mycode/mycode",    
     "pages/myCard/myCard",
     "pages/proposal/proposal",
-    "pages/newTaskDetail/newTaskDetail",
-    "pages/completed/completed",
     "pages/beforeComplete/beforeComplete",
-    "pages/mycode/mycode",
     "pages/newTask/newTask",
-    "pages/index/index",
     "pages/register/register",
     "pages/serverBook/serverBook",
     "pages/registerVolun/registerVolun"

@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    status:0,
+    status:1,
     headImg:'../../images/head01.png',
     name:'王雯莉',
     volunteerNav:[
@@ -17,21 +17,21 @@ Page({
     volunteerList:[
       { image: '../../images/icon04.png', text: '金点子', to: "../proposal/proposal"},
       { image: '../../images/icon05.png', text: '我的名片', to: "../myCard/myCard" },
-      { image: '../../images/icon06.png', text: '我的顾客', },
-      { image: '../../images/icon07.png', text: '历史评价' },
+      { image: '../../images/icon06.png', text: '我的顾客', to: "../customer/customer"},
+      { image: '../../images/icon07.png', text: '历史评价', to: "../hisComment/hisComment", },
     ],
     clientNav:[
-      { image: '../../images/icon09.png', text: '预约中' },
-      { image: '../../images/icon10.png', text: '预约成功' },
-      { image: '../../images/icon11.png', text: '预约失败' },
-      { image: '../../images/icon12.png', text: '我的评价' },
+      { image: '../../images/icon09.png', text: '预约中', to: "../newTaskDetail/newTaskDetail?user_type=U&bookStatus=0"},
+      { image: '../../images/icon10.png', text: '预约成功', to: "../newTaskDetail/newTaskDetail?user_type=U&bookStatus=1"},
+      { image: '../../images/icon11.png', text: '预约失败', to: "../newTaskDetail/newTaskDetail?user_type=U&bookStatus=2" },
+      { image: '../../images/icon12.png', text: '我的评价', to: "" },
     ],
     clientList:[
       { image: '../../images/icon13.png', text: '免费名额' },
-      { image: '../../images/icon14.png', text: '服务历史' },
-      { image: '../../images/icon15.png', text: '金点子' },
-      { image: '../../images/icon16.png', text: '我的义工' },
-      { image: '../../images/icon17.png', text: '我的邀请码' },
+      { image: '../../images/icon14.png', text: '服务历史', to: "../serveHis/serveHis"},
+      { image: '../../images/icon15.png', text: '金点子', to: "../proposal/proposal"},
+      { image: '../../images/icon16.png', text: '我的义工', to: "../myVolunteer/myVolunteer"},
+      { image: '../../images/icon17.png', text: '我的邀请码', to: "../mycode/mycode"},
     ]
   },
   navTo:function(event){

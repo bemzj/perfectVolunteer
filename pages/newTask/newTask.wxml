@@ -6,7 +6,7 @@
       <view>
         <text>{{item.text}}~</text>
       </view>
-      <view>
+      <view data-to='{{item.to}}' bindtap='navTo'>
         <text>查看</text>
       </view>
     </view>
