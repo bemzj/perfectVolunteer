@@ -14,7 +14,7 @@
   -webkit-align-items: center;
   -webkit-justify-content: center;
   -webkit-flex-direction: column; 
-  z-index: 1000;
+  z-index: 10000;
 }
 .tips{
   width: 87.33%;

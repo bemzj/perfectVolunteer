@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-  <view class='main'style='background-image:url("../../images/index_back.jpg")'>
+  <view class='main'>
     <view class='bannerAndChoice'>
       <!--四个选项-->
       <view class='choice clearfloat'>

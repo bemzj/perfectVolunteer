@@ -1,16 +1,18 @@
-<view class='wrap' style='background:url("../../images/bj.png") no-repeat;background-size: 100% 100%;'>
+<view class='wrap'>
   <view class='list'>
     <view class='list1'>
       <view>
         <image mode='aspectFit' src='../../images/title01.png'></image>
       </view>
     </view>
-    <view class='list2' style='background: #ffffff;border-radius: 20rpx;border:1px solid #ede8e8;'>
-      <view bindtap='write'>
-        <textarea bindblur='showIt' value='{{textareaTxt}}'></textarea>
-        <image wx:if='{{writing == false}}' mode='widthFix' src='../../images/bj05.png'></image>
+    <form>
+      <view class='list2' style='background: #ffffff;border-radius: 20rpx;border:1px solid #ede8e8;'>     
+          <view>
+            <textarea bindtap='write' bindfocus='hideImage' bindblur='showIt' value='{{textareaTxt}}' wx:if='{{disabled}}'></textarea>
+            <image wx:if='{{writing}}' mode='widthFix' src='../../images/bj05.png'></image>
+          </view>
       </view>
-    </view>
+    </form>
     <view class='list-text' wx:if='{{user_type == "V"}}'>
       <text>如您的建议被采纳，将收到一份精美礼品哦！</text>
     </view>

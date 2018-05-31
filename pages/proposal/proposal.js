@@ -5,12 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    writing:false,
+    writing:true,
     user_type:'V',
     popText1: '',
     tipStatus1: false, //弹窗1
     tipStatus2: false, //弹窗2
-    textareaTxt:''
+    textareaTxt:'',
+    disabled:true
   },
   write:function(e){
     this.setData({
@@ -20,9 +21,14 @@ Page({
   showIt:function(e){
     if(e.detail.value ==  ''){
       this.setData({
-        writing:false
+        writing:true
       })
     }
+  },
+  hideImage:function(e){
+    this.setData({
+      writing: false
+    })
   },
   submitSuggust:function(e){
     if (this.data.writing==true)
@@ -31,12 +37,15 @@ Page({
         tipStatus1: !this.data.tipStatus1,
         popText1:'提交成功，感谢您的建议！',
         textareaTxt:'',
-        writing: false
+        writing: true,
+        disabled:false
       });
     }else{
       this.setData({
         tipStatus1: !this.data.tipStatus1,
-        popText1:'请输入您的建议，谢谢！'
+        popText1: '请输入您的建议，谢谢！',
+        writing: true,
+        disabled: false
       });
     }
   },
@@ -44,6 +53,8 @@ Page({
   closeTip: function () {
     this.setData({
       tipStatus1: !this.data.tipStatus1,
+      disabled: true,
+      textareaTxt: ''
     });
   },
   // 弹窗2取消

@@ -1,6 +1,6 @@
 <!--pages/personInfo/personInfo.wxml-->
 <view id='personInfo'>
-  <view class="list1" style='background:url("../../images/bj01.png") no-repeat top left;background-size: 100% 100%;'>
+  <view class="list1">
     <view class='l1-1'>
       <view>
         <image mode='scaleToFill' src="{{headImg == ''?'../../images/head.png':headImg}}"></image>

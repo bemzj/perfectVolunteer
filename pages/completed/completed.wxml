@@ -15,8 +15,8 @@
       </view>
     </view>
     <view data-index='{{idx}}' bindtap='tixing'>
-      <icon wx:if='{{item.urge == 1}}' style='background: url("../../images/icon18_sel.png") no-repeat center center;background-size:100% 100%;'></icon>
-      <icon wx:else style='background: url("../../images/icon18.png") no-repeat center center;background-size:100% 100%;'></icon>
+      <icon wx:if='{{item.urge == 1}}'class='icon2' ></icon>
+      <icon wx:else class='icon1'></icon>
       <text bindtap='warn' data-index='{{idx}}'>提醒评价</text>
     </view>
   </view>

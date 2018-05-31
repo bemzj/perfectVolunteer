@@ -18,7 +18,7 @@
     </view>
   </view>
 </view>
-<view class='wrap' wx:else style='background:url("../../images/bj.png") no-repeat;background-size: 100% 100%;'>
+<view class='wrap' wx:else>
   <view class="list">
     <view class='list1'>
       <view>
@@ -26,7 +26,7 @@
       </view>
     </view>
     <view class=" {{user_type=='U'&&bookStatus==1||user_type=='U'&&bookStatus==2?'listBkg':''}}">
-      <view class='list2' style='background:url("../../images/bj04.png") no-repeat;background-size: 100% 100%;'>
+      <view class='list2'>
         <view>
           <view>
             <view class='name'>
