@@ -51,7 +51,7 @@
     </block>
     <block wx:if='{{status == 1}}'>
       <view class='l2-wrap l2-wrap1'>
-        <view wx:for='{{clientList}}' wx:for-item='item' wx:for-index='idx' wx:key='{{idx}}'  data-to='{{item.to}}' bindtap='navTo'>
+        <view wx:for='{{clientList}}' wx:for-item='item' wx:for-index='idx' wx:key='{{idx}}'  data-to='{{item.to}}' bindtap='{{ item.to == ""?"":"navTo"}}'>
           <icon style='background:url("{{item.image}}") no-repeat top left;background-size: 100% 100%;'></icon>
           <text>{{item.text}}</text>
           <text wx:if='{{idx == 2}}'>(对活动的意见或建议)</text>

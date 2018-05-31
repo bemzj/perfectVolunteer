@@ -14,6 +14,17 @@ Page({
    * 页面的初始数据
    */
   data: {
+    volunteerData:{
+      src:'',
+      code:'',
+      id:'',
+      name:'',
+      phone:'',
+      idcard:''
+    },
+    tipStatus1: false, //弹窗1
+    tipStatus2: false, //弹窗2
+    popText1: '',
     region: [
       {  
         'province':"省",
@@ -21,7 +32,8 @@ Page({
         'area':"区"
       }
     ],
-    headsrc:'../../images/head.png'
+    headsrc:'../../images/head.png',
+    addressIndex:-1 //删除地址的标识
   },
 
   /**
@@ -53,6 +65,7 @@ Page({
             'area':"区"
       }
     );
+    popStatus:-1,//识别弹窗从那里调用
     this.setData({
       region: nowRegion
     });
@@ -69,24 +82,12 @@ Page({
         duration: 5000
       })
     }else{
-      wx.showModal({
-        title: '微信提示',
-        content: '是否删除该地址',
-        mask: 'true',
-        success: function (res) {
-          if (res.confirm) {
-            nowRegion.splice(index, 1);
-            self.setData({
-              region: nowRegion
-            });
-            wx.showToast({
-              title: '删除成功',
-              icon: 'success',
-              duration: 2000
-            })
-          }
-        }
-      })
+      this.setData({
+        popStatus: 0,
+        tipStatus2: !this.data.tipStatus2,
+        popText1: '请确认是否删除该地址！',
+        addressIndex: index
+      });
     }
     
   },
@@ -123,5 +124,45 @@ Page({
    */
   onShareAppMessage: function () {
   
-  }
+  },
+  nowRegister:function(){
+    
+    this.setData({
+      popStatus:1,
+      tipStatus2: !this.data.tipStatus2,
+      popText1:'请确认信息您所提交的信息是否正确？'
+    });
+  },
+  // 弹窗1取消
+  closeTip: function () {
+    this.setData({
+      tipStatus1: !this.data.tipStatus1,
+    });
+  },
+  // 弹窗2取消
+  cancel: function () {
+    this.setData({
+      tipStatus2: !this.data.tipStatus2
+    });
+  },
+  // 弹窗2确定
+  comfirmPop: function () {
+    if (this.data.popStatus==0)
+    {
+      var nowRegion = this.data.region;
+      nowRegion.splice(this.data.addressIndex, 1);
+      this.setData({
+        region: nowRegion,
+        tipStatus2: !this.data.tipStatus2,
+        tipStatus1: !this.data.tipStatus1,
+        popText1: "删除成功！"
+      });
+    } else if (this.data.popStatus == 1){
+      this.setData({
+        tipStatus2: !this.data.tipStatus2,
+        tipStatus1: !this.data.tipStatus1,
+        popText1: "登记成功，谢谢！"
+      });
+    }
+  },
 })

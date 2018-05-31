@@ -11,7 +11,7 @@
       <view>
         <view>
           <view class='noNewDetails'>
-            <text>很抱歉！暂无最新预约详情！</text>
+            <text>{{noNewDetails}}</text>
           </view>
         </view>
       </view>
@@ -48,7 +48,7 @@
               <text>服务事项：</text>
               <text>{{detailData.matter == ''?'空调':detailData.matter}}</text>
             </view>
-            <view class='serverSuccess' wx:if="{{user_type=='U'&&bookStatus==1}}">服务完成</view>
+            <view class='serverSuccess' bindtap='serveComplete' wx:if="{{user_type=='U'&&bookStatus==1}}">服务完成</view>
           </view>
         </view>
       </view>
@@ -58,12 +58,22 @@
       </view>
     </view>
     <view class='list3' wx:if='{{user_type == "V"}}'>
-      <view>
+      <view bindtap='refuse'>
         <text>拒绝</text>
       </view>
-      <view>
-        <text>接受</text>
+      <view bindtap='accept'>
+        <text >接受</text>
       </view>
     </view>
   </view>
 </view>
+<!--弹窗-->
+<tips wx:if='{{tipStatus1}}'>
+  <text slot="tp1">{{popText1}}</text>
+  <view slot="confrim" bindtap='closeTip'>确定</view>
+</tips>
+<tips wx:if='{{tipStatus2}}'>
+  <text slot="tp1">{{popText1}}</text>
+  <view slot="confrim" style='width:48%;' bindtap='comfirmPop'>确定</view>
+  <view slot="cancel" style='width:48%;' bindtap='cancel'>取消</view>
+</tips>

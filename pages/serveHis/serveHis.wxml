@@ -16,8 +16,58 @@
         </view>
       </view>
     </view>
-    <view>
+     <view bindtap='{{!item.has?"click01":""}}' class='{{!item.has?"":"gray"}}' data-index='{{idx}}'> 
+    <!-- <view bindtap='click01' class='{{!item.has?"":"gray"}}' data-index='{{idx}}'> -->
       <text>绑定义工</text>
     </view>
   </view>
 </view>
+<view id='volunteerCard' wx:if='{{popUp}}'>
+  <view>
+    <view class='list'>
+      <view class='list1'>
+        <view>
+          <image mode='aspectFit' src='../../images/title03.png'></image>
+        </view>
+      </view>
+      <view class='list2-wrap' style='background-image:url("../../images/select.png");'>
+        <view class='list2' >
+        <view>
+          <view>
+            <view class='name'>
+              <text>{{detailData.name == ''?'用户':detailData.name}}</text>
+            </view>
+            <view>
+              <text>电话：{{detailData.phone == ''?'000-0000-0000':detailData.phone}}</text>
+            </view>
+            <view>
+              <text>义工编号：{{detailData.serial == ''?'xxxxxx':detailData.serial}}</text>
+            </view>
+            <view>
+              <text>服务地址：</text>
+              <text>{{detailData.address == ''?'地址':detailData.address}}</text>
+            </view>
+            <view class='head'>
+              <image src='{{detailData.src==""?"../../images/volunteer.png":detailData.src}}' mode='widthFix'></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='list3'>
+        <view bindtap='btn01'>确定</view>
+      </view>
+      </view>
+    </view>
+    <view class='closePop' bindtap='closePop'><image src='../../images/close.png' mode='widthFix'></image> </view>
+  </view>
+</view>
+<!--弹窗-->
+<tips wx:if='{{tipStatus1}}'>
+  <text slot="tp1">{{popText1}}</text>
+  <view slot="confrim" bindtap='closeTip'>确定</view>
+</tips>
+<tips wx:if='{{tipStatus2}}'>
+  <text slot="tp1">{{popText1}}</text>
+  <view slot="confrim" style='width:48%;' bindtap='comfirmPop'>确定</view>
+  <view slot="cancel" style='width:48%;' bindtap='cancel'>取消</view>
+</tips>

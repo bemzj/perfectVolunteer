@@ -7,7 +7,7 @@
     </view>
     <view class='list2' style='background: #ffffff;border-radius: 20rpx;border:1px solid #ede8e8;'>
       <view bindtap='write'>
-        <textarea bindblur='showIt'></textarea>
+        <textarea bindblur='showIt' value='{{textareaTxt}}'></textarea>
         <image wx:if='{{writing == false}}' mode='widthFix' src='../../images/bj05.png'></image>
       </view>
     </view>
@@ -15,7 +15,17 @@
       <text>如您的建议被采纳，将收到一份精美礼品哦！</text>
     </view>
     <view class='list3'>
-      <view>确定接受</view>
+      <view bindtap='submitSuggust'>确定接受</view>
     </view>
   </view>
 </view>
+<!--弹窗-->
+<tips wx:if='{{tipStatus1}}'>
+  <text slot="tp1">{{popText1}}</text>
+  <view slot="confrim" bindtap='closeTip'>确定</view>
+</tips>
+<tips wx:if='{{tipStatus2}}'>
+  <text slot="tp1">{{popText1}}</text>
+  <view slot="confrim" style='width:48%;' bindtap='comfirmPop'>确定</view>
+  <view slot="cancel" style='width:48%;' bindtap='cancel'>取消</view>
+</tips>

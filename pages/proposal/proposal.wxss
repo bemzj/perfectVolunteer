@@ -89,7 +89,7 @@ page{
   border-radius: 10rpx;
 }
 .list-text{
-  font-size: 21rpx;
+  font-size: 22rpx;
   color: #bebebe;
   text-align: center;
   letter-spacing: 4rpx;

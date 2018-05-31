@@ -2,7 +2,7 @@
 <view id='main' style='background-image:url("../../images/rule_back.png")'>
   <view class='main'>
     <view class='head'>
-      <image src='{{headsrc}}' mode='widthFix'></image>
+      <image src='{{volunteerData.src==""?headsrc:volunteerData.src}}' mode='widthFix'></image>
       <view class='headText'>
         <text>添加头像</text>
       </view>
@@ -12,7 +12,7 @@
         <text>义工注册码</text>
       </view>
       <view class='inputRight'>
-        <input type='text'></input>
+        <input type='text' value='{{volunteerData.code}}'></input>
       </view>
     </view>
     <view class='inputBox clearfloat'>
@@ -20,7 +20,7 @@
         <text>义工编号</text>
       </view>
       <view class='inputRight'>
-        <input type='text' disabled></input>
+        <input type='text' disabled value='{{volunteerData.id}}'></input>
       </view>
     </view>
     <view class='inputBox clearfloat'>
@@ -28,7 +28,7 @@
         <text>姓名</text>
       </view>
       <view class='inputRight'>
-        <input type='text'></input>
+        <input type='text' value='{{volunteerData.name}}'></input>
       </view>
     </view>
     <view class='inputBox clearfloat'>
@@ -36,7 +36,7 @@
         <text>手机号码</text>
       </view>
       <view class='inputRight'>
-        <input type='number'></input>
+        <input type='number' value='{{volunteerData.phone}}'></input>
       </view>
     </view>
     <view class='inputBox clearfloat'>
@@ -44,7 +44,7 @@
         <text>身份证</text>
       </view>
       <view class='inputRight'>
-        <input type='idcard'></input>
+        <input type='idcard' value='{{volunteerData.idcard}}'></input>
       </view>
     </view>
     <view class='addressBoxs'>
@@ -65,7 +65,17 @@
       </view>
     </view>    
     <view class='tips'>*服务区域可多选</view>
-    <view class='nowRegister'>立即登记
+    <view class='nowRegister' bindtap='nowRegister'>立即登记
     </view>
   </view>
 </view>
+<!--弹窗-->
+<tips wx:if='{{tipStatus1}}'>
+  <text slot="tp1">{{popText1}}</text>
+  <view slot="confrim" bindtap='closeTip'>确定</view>
+</tips>
+<tips wx:if='{{tipStatus2}}'>
+  <text slot="tp1">{{popText1}}</text>
+  <view slot="confrim" style='width:48%;' bindtap='comfirmPop'>确定</view>
+  <view slot="cancel" style='width:48%;' bindtap='cancel'>取消</view>
+</tips>

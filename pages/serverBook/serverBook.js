@@ -12,7 +12,6 @@ for (let i = 1; i <= 12; i++) {
 }
 selectDate(date.getMonth()+1);
 function selectDate(n){
-  console.log(1);
   days.splice(0, days.length);
   switch (n) {
     case 1:
@@ -238,9 +237,13 @@ Page({
   },
   //确定预约
   comfirmBook:function(){
+    // this.setData({
+    //   serverStatus: !this.data.serverStatus,
+    //   tipStatus1: !this.data.tipStatus1
+    // });
     this.setData({
       serverStatus: !this.data.serverStatus,
-      tipStatus1: !this.data.tipStatus1
+      vp: !this.data.vp
     });
   },
   // 弹窗1取消
@@ -300,7 +303,9 @@ Page({
   //确定义工
   cVolunteer:function(){
     this.setData({
-      vp: !this.data.vp
+      vp: !this.data.vp,
+      tipStatus1: !this.data.tipStatus1,
+      popText1: '预约信息提交成功！'
     });
   }
 })

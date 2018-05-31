@@ -99,11 +99,11 @@
 
 <!--弹窗-->
 <tips wx:if='{{tipStatus1}}'>
-  <text slot="tp1">您所在的城市暂不支持小程序预约，如想报名，可咨询当地完美分公司。</text>
+  <text slot="tp1">{{popText1}}</text>
   <view slot="confrim" bindtap='closeTip'>确定</view>
 </tips>
 <tips wx:if='{{tipStatus2}}'>
-  <text slot="tp1">您所在的城市暂不支持小程序预约，如想报名，可咨询当地完美分公司。</text>
+  <text slot="tp1">{{popText1}}</text>
   <view slot="confrim" style='width:48%;' bindtap='comfirmPop'>确定</view>
   <view slot="cancel" style='width:48%;' bindtap='cancel'>取消</view>
 </tips>

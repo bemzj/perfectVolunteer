@@ -28,7 +28,9 @@
     </view>
     <view class='list4'></view>
     <view class='list3'>
-      <view>修改名片</view>
+      <view>
+      <navigator url='../../pages/registerVolun/registerVolun' >修改名片</navigator>
+      </view>
     </view>
   </view>
 </view>

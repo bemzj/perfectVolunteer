@@ -39,12 +39,15 @@ Page({
    */
   onLoad: function (options) {
     var navTitle = "";
-    if (this.data.user_type == 'V') {
+    console.log(options);
+    if (options.user_type == 'V') {
       navTitle = "历史评价";
     } else {
       navTitle = "我的评价";
     }
-
+    this.setData({
+      user_type: options.user_type
+    });
     wx.setNavigationBarTitle({
       title: navTitle//页面标题为路由参数
     })
